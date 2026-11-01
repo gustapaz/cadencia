@@ -20,8 +20,7 @@ export default function Home() {
           <div className="film-title">
             <span>TODA ESTREIA TEM UM ANTES.</span>
             <h2>
-              Encontre
-              <br />o que não
+              Encontre <br />o que não
               <br />
               <em>pode esperar.</em>
             </h2>
