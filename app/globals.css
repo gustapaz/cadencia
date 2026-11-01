@@ -1,0 +1,563 @@
+@import "./base.css";
+@font-face {
+  font-family: Outfit;
+  src: url("/fonts/display.woff2") format("woff2");
+  font-display: swap;
+}
+body {
+  background: #252723;
+  color: #eeeadf;
+  font-family: Outfit, Manrope;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 3vw;
+  border-bottom: 1px solid #9c9c8b44;
+}
+.brand {
+  font-size: 34px;
+  letter-spacing: -2px;
+  font-weight: 600;
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+.brand span,
+header > a:last-child {
+  font: 7px Mono;
+  letter-spacing: 0.5px;
+}
+main {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+}
+.timeline-area {
+  position: sticky;
+  top: 0;
+  height: calc(100svh - 10px);
+  min-height: 790px;
+  padding: 25px 2.5vw;
+  border-right: 1px solid #9c9c8b44;
+  display: flex;
+  flex-direction: column;
+}
+.scene-number {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  font: 6px Mono;
+}
+.film-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin-top: 30px;
+}
+.film-title > span {
+  font: 7px/1.7 Mono;
+  max-width: 105px;
+  margin-bottom: 5px;
+}
+.film-title h2 {
+  font: 64px/0.9 Outfit;
+  letter-spacing: -3px;
+  font-weight: 400;
+  margin: 0;
+}
+.film-title em {
+  font-family: Georgia;
+  font-weight: 400;
+  color: #e7ef72;
+}
+#timeline {
+  display: block;
+  width: 100%;
+  flex: 1;
+  min-height: 330px;
+  margin: 20px 0 0;
+}
+.legend {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font: 6px Mono;
+  margin: 15px 0;
+}
+.legend span:first-child {
+  color: #e7ef72;
+}
+.legend span:nth-child(2) {
+  color: #a4beb6;
+}
+.legend span:last-child {
+  color: #e38b6c;
+}
+figure {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin: 10px 0 0;
+}
+figure img {
+  width: 110px;
+  height: 65px;
+  object-fit: cover;
+  filter: grayscale(1);
+  opacity: 0.6;
+}
+figcaption {
+  font: italic 18px Georgia;
+}
+#app-root {
+  padding: 30px;
+}
+.production-head > span {
+  font: 7px Mono;
+  color: #c4c5af;
+}
+.production-head h1 {
+  font: 49px/0.95 Outfit;
+  font-weight: 400;
+  letter-spacing: -2px;
+  margin: 25px 0;
+}
+.production-head em {
+  font-family: Georgia;
+  color: #e7ef72;
+  font-weight: 400;
+}
+.presets {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin: 25px 0;
+}
+.presets button {
+  font-size: 8px;
+  border: 0;
+  border-bottom: 1px solid #b5b8a066;
+  padding: 8px 0;
+}
+.task-inputs {
+  border-top: 1px solid #a3a38b55;
+}
+.task-inputs label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid #a3a38b44;
+  padding: 10px 0;
+  font: 9px Mono;
+}
+.task-inputs label > span {
+  flex: 1;
+}
+.task-inputs input {
+  width: 50px;
+  background: #191b17;
+  color: #f0eddf;
+  border: 1px solid #999c8377;
+  padding: 8px;
+  font: 13px Mono;
+}
+.task-inputs small {
+  font-size: 7px;
+}
+.deadline {
+  display: block;
+  margin: 25px 0;
+  font: 9px Mono;
+}
+.deadline span {
+  float: right;
+}
+.deadline input {
+  display: block;
+  width: 100%;
+  height: 30px;
+  accent-color: #e7ef72;
+  margin-top: 10px;
+}
+button {
+  background: none;
+  color: inherit;
+  border: 1px solid #b5b8a077;
+  padding: 13px 16px;
+  font: 9px Mono;
+}
+.dependency + button {
+  width: 100%;
+  background: #e7ef72;
+  color: #272a24;
+  margin-top: 20px;
+}
+.status {
+  font: 9px/1.8 Mono;
+  color: #e7ef72;
+  min-height: 35px;
+}
+.result {
+  border-block: 1px solid #a3a38b55;
+  padding: 18px 0;
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+.result > strong {
+  font: 83px/1 Outfit;
+  font-weight: 400;
+  letter-spacing: -5px;
+}
+.result small {
+  display: block;
+  font: 7px Mono;
+  letter-spacing: 1px;
+  text-align: center;
+  margin-top: 10px;
+}
+.result p {
+  font: 11px/1.8 Outfit;
+  max-width: 190px;
+}
+details {
+  border-bottom: 1px solid #a3a38b55;
+  padding: 20px 0;
+  font: 9px/1.8 Mono;
+}
+summary {
+  cursor: pointer;
+  font-size: 8px;
+}
+details label {
+  display: block;
+  margin-top: 20px;
+  font: 9px Mono;
+}
+details input:not([type="range"]),
+details select {
+  display: block;
+  width: 100%;
+  background: #242723;
+  color: inherit;
+  border: 0;
+  border-bottom: 1px solid #a3a38b77;
+  padding: 12px 0;
+  font: 14px Outfit;
+}
+details small {
+  display: block;
+  font-size: 7px;
+  margin-top: 18px;
+}
+details button {
+  font-size: 8px;
+  margin: 15px 8px 0 0;
+}
+details a {
+  display: block;
+  text-decoration: underline;
+  overflow-wrap: anywhere;
+  margin-top: 20px;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 7px;
+  margin-top: 20px;
+}
+caption {
+  text-align: left;
+  margin-bottom: 12px;
+}
+th,
+td {
+  text-align: left;
+  padding: 10px 4px;
+  border-bottom: 1px solid #a3a38b44;
+}
+th {
+  font-weight: 400;
+}
+.limit {
+  font: 7px/1.9 Mono;
+  color: #aaa995;
+  margin-top: 25px;
+}
+footer {
+  padding: 25px 3vw;
+  border-top: 1px solid #a3a38b44;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  font: 8px Mono;
+}
+footer > span {
+  margin-right: auto;
+}
+footer button {
+  font-size: 8px;
+}
+@media (max-width: 1000px) {
+  .brand span {
+    display: none;
+  }
+  main {
+    grid-template-columns: 1.2fr 1fr;
+  }
+  .film-title {
+    display: block;
+  }
+  .film-title > span {
+    display: block;
+    max-width: none;
+    margin-bottom: 20px;
+  }
+  .film-title h2 {
+    font-size: 53px;
+  }
+  .timeline-area {
+    padding: 25px 20px;
+  }
+  #app-root {
+    padding: 25px 22px;
+  }
+  .production-head h1 {
+    font-size: 43px;
+  }
+  .scene-number > span:last-child {
+    display: none;
+  }
+}
+@media (max-width: 680px) {
+  header {
+    padding: 20px;
+  }
+  .brand {
+    font-size: 29px;
+  }
+  main {
+    display: block;
+  }
+  .timeline-area {
+    position: relative;
+    height: 770px;
+    min-height: 770px;
+    border-right: 0;
+    border-bottom: 1px solid #a3a38b44;
+    padding: 25px 22px;
+  }
+  .film-title {
+    display: flex;
+    align-items: end;
+    gap: 20px;
+  }
+  .film-title > span {
+    max-width: 90px;
+    font-size: 6px;
+  }
+  .film-title h2 {
+    font-size: 49px;
+    letter-spacing: -2px;
+  }
+  #timeline {
+    min-height: 350px;
+    margin-top: 25px;
+  }
+  .legend {
+    font-size: 5px;
+  }
+  figure img {
+    width: 90px;
+    height: 55px;
+  }
+  figcaption {
+    font-size: 17px;
+  }
+  #app-root {
+    padding: 30px 22px;
+  }
+  .production-head h1 {
+    font-size: 55px;
+  }
+  .result > strong {
+    font-size: 90px;
+  }
+  footer {
+    padding: 22px;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  footer > span {
+    width: 100%;
+  }
+}
+[hidden] {
+  display: none !important;
+}
+[hidden] {
+  display: none !important;
+}
+
+/* Full-width production screen followed by a horizontal editing desk. */
+@media (min-width: 681px) {
+  main {
+    display: block;
+  }
+  .timeline-area {
+    position: relative;
+    height: 740px;
+    min-height: 740px;
+    border-right: 0;
+    border-bottom: 1px solid #9c9c8b44;
+    padding: 28px 5vw;
+  }
+  .film-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 25px;
+  }
+  .film-title > span {
+    max-width: 190px;
+    font-size: 9px;
+  }
+  .film-title h2 {
+    font-size: 52px;
+    line-height: 1;
+    letter-spacing: -2px;
+  }
+  .film-title h2 br {
+    display: none;
+  }
+  .film-title h2 em {
+    display: block;
+  }
+  .scene-number {
+    font-size: 8px;
+  }
+  #timeline {
+    min-height: 330px;
+  }
+  .legend {
+    font-size: 8px;
+  }
+  figure {
+    position: absolute;
+    left: 5vw;
+    top: 80px;
+    margin: 0;
+    transform: translateY(55px);
+  }
+  figure img {
+    width: 100px;
+    height: 60px;
+  }
+  figcaption {
+    max-width: 130px;
+    font-size: 17px;
+  }
+  .film-title > span {
+    align-self: start;
+  }
+  .film-title h2 {
+    text-align: right;
+  }
+  .production {
+    display: grid;
+    grid-template-columns: 1.1fr 1.3fr 1fr;
+    gap: 25px 40px;
+    align-items: start;
+  }
+  #app-root {
+    padding: 40px 5vw;
+  }
+  .production-head {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .production-head h1 {
+    font-size: 62px;
+  }
+  .controls {
+    grid-column: 2;
+    grid-row: 1/6;
+  }
+  .presets {
+    margin-top: 0;
+  }
+  .status {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .results {
+    grid-column: 3;
+    grid-row: 1/5;
+  }
+  .archive {
+    grid-column: 1;
+    grid-row: 3;
+  }
+  .limit {
+    grid-column: 1;
+    grid-row: 4;
+    font-size: 8px;
+  }
+  .result {
+    display: block;
+  }
+  .result > strong {
+    display: flex;
+    gap: 15px;
+    align-items: end;
+  }
+  .result small {
+    margin-bottom: 10px;
+  }
+  .results table {
+    font-size: 7px;
+  }
+  .task-inputs label {
+    padding: 13px 0;
+  }
+  .controls > .dependency + button {
+    margin-top: 20px;
+  }
+  .production-head em {
+    display: block;
+  }
+  .production-head h1 {
+    margin-top: 25px;
+  }
+}
+@media (min-width: 681px) and (max-width: 1050px) {
+  .production {
+    grid-template-columns: 1fr 1fr;
+    gap: 25px 35px;
+  }
+  .controls {
+    grid-column: 2;
+    grid-row: 1/7;
+  }
+  .results {
+    grid-column: 1;
+    grid-row: 3;
+  }
+  .archive {
+    grid-row: 4;
+  }
+  .limit {
+    grid-row: 5;
+  }
+  .production-head h1 {
+    font-size: 52px;
+  }
+  .film-title h2 {
+    font-size: 43px;
+  }
+  .timeline-area {
+    height: 710px;
+    min-height: 710px;
+  }
+}

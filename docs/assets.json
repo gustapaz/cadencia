@@ -1,0 +1,31 @@
+{
+  "assets": [
+    {
+      "file": "public/media/subject.webp",
+      "author": "Bruna Corrêa",
+      "source_url": "https://www.pexels.com/photo/dramatic-studio-spotlight-with-warm-glow-29100022/",
+      "download_url": "https://images.pexels.com/photos/29100022/pexels-photo-29100022.jpeg",
+      "license": "Pexels License",
+      "license_url": "https://www.pexels.com/license/",
+      "verified_at": "2026-11-01T12:36:17.981029+00:00",
+      "source_sha256": "f741f0d0bd0cf03efb5496b67dfac1693253342dc56b49f3837c32480205ee52",
+      "output_sha256": "ec829010d6b24f482f64efd34dbb743cf5678f1cf76d92de1a50a06740196559",
+      "source_dimensions": [
+        2560,
+        3840
+      ],
+      "width": 800,
+      "height": 1200,
+      "bytes": 25632,
+      "transformations": [
+        "EXIF orientation applied",
+        "RGB conversion",
+        "long edge resized to maximum 1200px",
+        "EXIF removed",
+        "WebP quality 85, method 6"
+      ],
+      "visual_review": "Inspeção visual da versão final: sem faces identificáveis, marcas visíveis ou dados pessoais legíveis. Recortes usados em Doca, Rubato e Fagulha para excluir marcas de equipamentos.",
+      "usage": "Imagem de ambientação em demonstração de portfólio; não é produto para revenda e não implica endosso."
+    }
+  ]
+}
