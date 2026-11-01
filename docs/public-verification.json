@@ -1,0 +1,18 @@
+{
+  "date": "2026-11-01",
+  "demo": "https://cadencia-gustapaz.starrylinen.chatgpt.site",
+  "application_commit": "f98b79bfe369b57ba1ca4b4633a695beb2b265a7",
+  "automated_tests": 20,
+  "public_smoke": "passed",
+  "browser_flow": "passed",
+  "responsive_widths": [
+    390,
+    768
+  ],
+  "export": {
+    "filename": "cadencia.csv",
+    "bytes": 245,
+    "sha256": "106a523675658e3dd65f2db50ee8d1cdcbcc805a27458304001e11d773f2f8a2",
+    "structure": "passed"
+  }
+}
